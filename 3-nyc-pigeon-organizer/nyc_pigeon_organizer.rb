@@ -15,22 +15,34 @@ require 'pry-byebug'
 #     "Central Park" => ["Alex", "Ms. K", "Lucky"],
 #     "Library" => ["Peter Jr."],
 #     "City Hall" => ["Andrew"]
-#   }
+#   },
+
+
 # }
+
+#     {"Theo"=>{:color=>[], :gender=>[], :lives=>[]},
+# "Peter Jr."=>{:color=>[], :gender=>[], :lives=>[]},
+# "Lucky"=>{:color=>[], :gender=>[], :lives=>[]},
+# "Ms. K"=>{:color=>[], :gender=>[], :lives=>[]},
+# "Queenie"=>{:color=>[], :gender=>[], :lives=>[]},
+# "Andrew"=>{:color=>[], :gender=>[], :lives=>[]},
+# "Alex"=>{:color=>[], :gender=>[], :lives=>[]}}
+
+
 
 def nyc_pigeon_organizer(data)
 
-  binding.pry
+
   # make our data structure
 
     # get all the names
     names = data.values.map do |hash|
       hash.values
     end.flatten.uniq
-
+    # ['adam', 'bob']
 
     # each name is the key, and the value of that name is an empty hash
-    hash = {}
+    # hash = {}
     # go through each name
     # add each name into the hash
     # pigeon_list = {
@@ -38,6 +50,48 @@ def nyc_pigeon_organizer(data)
       # "Peter Jr." => {},
   # }
   # each_with_object -> to remove sandwich code
+    skeleton = names.each_with_object({}) do |name, initial_structure|
+      #
+      # [:color, :gender, :lives]
+
+      attr_hash = data.keys.each_with_object({}) do |attribute, attributes_hash|
+        attributes_hash[attribute] = []
+      end
+      initial_structure[name] = attr_hash
+    end
+
+    # for each pigeon
+      # go through each of the colors, and see if their name
+      # is in the corresponding array of colors
+      # if it is, we need to shovel in the color
+  data.keys.each_with_object(skeleton) do |characteristic, my_structure|
+  # [:gender, :color, :lives]
+    names.each do |pigeon|
+      data[characteristic].keys.each do |trait|
+        # color => "purple"
+        if data[characteristic][trait].include?(pigeon)
+          # ["david", "theo"]
+          # characteristic => color,
+          # trait => purple
+          my_structure[pigeon][characteristic] << trait.to_s
+        end
+      end
+      # [:purple, :blue, :red]
+    end
+  end
+
+    # hash
+    #     {"Theo"=>{:color=>[], :gender=>[], :lives=>[]},
+    # "Peter Jr."=>{:color=>[], :gender=>[], :lives=>[]},
+    # "Lucky"=>{:color=>[], :gender=>[], :lives=>[]},
+    # "Ms. K"=>{:color=>[], :gender=>[], :lives=>[]},
+    # "Queenie"=>{:color=>[], :gender=>[], :lives=>[]},
+    # "Andrew"=>{:color=>[], :gender=>[], :lives=>[]},
+    # "Alex"=>{:color=>[], :gender=>[], :lives=>[]}}
+
+
+
+
 
 
   # fill it in with the data
