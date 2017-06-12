@@ -1,3 +1,5 @@
+
+
 1. Describe what is happening in environment.
   what is each line doing?
   Why do we need to do this?
@@ -6,9 +8,11 @@
   - what do you have access to if you run ruby console.rb
 
 3. Note that we have an artist class and a song class.  Describe the relationship between artists and songs.
-  artist -> songs
+
+  artist has_many songs songs
   artist.songs
   song.artist
+  song belongs to artist
 4. Build out the following
   - Artist.all
     -> should return all of the artists that have been initialized
@@ -31,3 +35,7 @@
       then, without doing anything else, if I call...
      touch_the_sky.artist -> kanye
      (it should return kanye)
+
+
+  Different example
+  
