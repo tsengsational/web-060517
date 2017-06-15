@@ -45,7 +45,7 @@ class Candy
   end
 
   def update(attributes)
-    
+
   end
 end
 
