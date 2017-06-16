@@ -3,6 +3,7 @@ class Student
   attr_accessor :course
   @@all = []
   def initialize(name)
+    
     @name = name
     @@all << self
   end
