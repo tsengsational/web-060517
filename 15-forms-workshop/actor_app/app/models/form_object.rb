@@ -13,7 +13,9 @@ class FormObject
   end
 end
 
-
+# def form_for(activerecord_instance)
+  # yield FormBuilder.new(activerecord_instance)
+# end
 # f = FormObject.new(@actor)
 # f.text_field :name
 # <input type="text" name="#{name_attribute}">
