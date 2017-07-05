@@ -1,4 +1,6 @@
 Outline
+  1. Review Sinatra
+
   1. Review Nested forms
   Learning goals:
     - When do we need a nested form?
@@ -20,3 +22,28 @@ Outline
 
       b. build fancy
         - use mass assignment methods
+
+
+        <!-- User.create -->
+        <!-- params = {user: {name: 'bob', hometowns: []}}
+        params = {hometowns: ['philly', 'suburbia']}
+        params[:user][:name] -> 'bob' -->
+
+        [www.localhost:3000/users/new]
+
+
+        POST /users
+        _________
+        |   make a user       |
+           name
+           _____
+
+           hometown
+           _______
+
+           [make a user]
+
+
+Character.new({name: 'bob', foo: 'whatever'})
+<character>.name=('bob')
+<character>.foo=('whatever')
