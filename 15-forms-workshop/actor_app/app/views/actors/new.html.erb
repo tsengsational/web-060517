@@ -1,6 +1,7 @@
-<%= foo %>
 
-<%= form_tag  'actors' do %>
-  <%= text_field_tag 'actor[name]' %>
-  <%= submit_tag %>
+
+
+<%= form_for Actor.new do |f| %>
+  <% binding.pry %>
+  <%= f.text_field :name %>
 <% end %>
