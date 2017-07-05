@@ -1,15 +1,9 @@
-<%= form_tag '/actors', method: :get do %>
-  <%= label_tag 'actor name' %>
-  <%= text_field_tag 'actor[name]' %>
-  <%= submit_tag %>
-<% end %>
-
+<!--  -->
 
 <ul>
 <% @actors.each do |actor| %>
   <li> <%= actor.name %></li>
 <% end %>
 </ul>
-<!-- <!-- <form > -->
 
 <!--  --> -->

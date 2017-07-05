@@ -1,6 +1,9 @@
 class ActorsController < ApplicationController
   def new
-    @actor = Actor.new
+    @actor = Actor.new(name: 'bob')
+    @actor.save
+    # <id: 1>
+    # render 'actors/new'
   end
 
   def create
@@ -14,7 +17,7 @@ class ActorsController < ApplicationController
   end
 
   def index
-
+    @actors = Actor.all
   end
 
   def show
