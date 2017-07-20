@@ -1,5 +1,4 @@
 # Document Object Model
-DOM CRUD, event listeners
 
 ## Objectives
 * The Document Object Model
@@ -36,7 +35,7 @@ DOM CRUD, event listeners
   * Create elements and add to page - how do we do this?
 
 ## Notes
-* Coercion of array
+* Coercion of array-like objects into arrays
   * let arr = Array.prototype.slice.call(arrayLikeObject)
   * let arr = [...arrayLikeObject]
 * How to tell a NodeList from an Array?
