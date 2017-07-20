@@ -3,9 +3,17 @@ DOM CRUD, event listeners
 
 ## Objectives
 * The Document Object Model
-    * Outline
     * HTML Source v DOM
+    * Outline
 * CSS Selectors (brief)
+    * Individual selectors
+      * Class
+      * Id
+      * Tag
+      * Psuedo-selector (Not for DOM)
+    * Combining selectors
+      * Space between (#parent .child)
+      * Chain (div.image)
 * Selecting DOM nodes
     * node.querySelector
     * node.querySelectorAll
@@ -19,11 +27,17 @@ DOM CRUD, event listeners
 * Creating DOM objects
     * document.createElement
     * element.appendChild
-* Event listeners (stretch)
 
 ## Activity
 * Go to your favorite website and modify the DOM programmatically
-  * Select elements
-  * Delete elements
-  * Modify elements
-  * Create elements and add to page
+  * Select elements - save to variable
+  * Delete elements - delete at least 2
+  * Modify elements - replace image url
+  * Create elements and add to page - how do we do this?
+
+## Notes
+* Coercion of array
+  * let arr = Array.prototype.slice.call(arrayLikeObject)
+  * let arr = [...arrayLikeObject]
+* How to tell a NodeList from an Array?
+  * <obj>.constructor
