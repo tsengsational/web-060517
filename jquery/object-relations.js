@@ -18,3 +18,9 @@ course = new Course('ruby', avi)
 course.teacher()
 teacher.courses()
 // single source of truth
+
+
+// Goals:
+
+// 1. Simply by creating new teachers will add to the store and add an id
+// 2. calling teacher.courses() returns a list of courses
