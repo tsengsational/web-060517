@@ -7,7 +7,5 @@
 let store = {teachers: []}
 
 class Teacher {
-  constructor(name, hometown){
 
-  }
 }
