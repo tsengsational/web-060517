@@ -1,4 +1,5 @@
-<%= form_for @actor do |f| %>
-  <%= f.text_field :name %>
+<%= form_for :actor, url: '/actors' do |f| %>
+  Name: <%= f.text_field :name %>
+  Hometown: <%= f.text_field :hometown%>
   <%= f.submit %>
 <% end %>
