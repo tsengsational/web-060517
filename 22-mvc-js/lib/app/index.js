@@ -5,9 +5,6 @@
 
 
 let store = {teachers: []}
-$(function(){
-
-})
 
 class Teacher {
   constructor(name, hometown){
