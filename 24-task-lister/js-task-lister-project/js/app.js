@@ -33,7 +33,7 @@ $(function() { // on document ready
 });
 
 function render(html, into){
-  event.preventDefault()
+
   $(into).empty()
   $(into).append(html)
 }
