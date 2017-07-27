@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script
+    src="http://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="./models/Category.js"></script>
+    <script src="./models/Instrument.js"></script>
+    <script src="./controllers/instrumentController.js"></script>
+    <script src="./practice.js"></script>
+  </head>
+  <body>
+    <form class="" action="index.html" method="post">
+      <p>Musical Instrument</p>
+      <input type="text" class="instrument" value="">
+      <label for="instrument">Instrument</label>
+      <input type="text" class="category" value="">
+      <label for="category">Category</label>
+      <button type="button" id="submit-instrument" name="button">Submit</button>
+    </form>
+
+    <h2>Instruments:</h2>
+    <div class="instruments-go-here">
+    </div>
+    <h2>Categories:</h2>
+    <div class="categories-go-here">
+    </div>
+  </body>
+</html>
